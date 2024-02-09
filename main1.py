@@ -4,7 +4,7 @@ from llama_index import VectorStoreIndex, SimpleDirectoryReader
 from IPython.display import Markdown, display
 from llama_index import StorageContext, load_index_from_storage
 
-os.environ["OPENAI_API_KEY"] = "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"
+os.environ["OPENAI_API_KEY"] = "your-openapi-key"
 
 
 documents = SimpleDirectoryReader("docs").load_data()
