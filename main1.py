@@ -4,7 +4,14 @@ from llama_index import VectorStoreIndex, SimpleDirectoryReader
 from IPython.display import Markdown, display
 from llama_index import StorageContext, load_index_from_storage
 
-os.environ["OPENAI_API_KEY"] = "your-openapi-key"
+from dotenv import load_dotenv
+load_dotenv()
+
+openai_api_key = os.getenv('OPENAI_API_KEY')
+
+if openai_api_key is None:
+    print("ERROR: OpenAI API key not found. Please set the OPENAI_API_KEY environment variable.")
+    exit(1)
 
 
 documents = SimpleDirectoryReader("docs").load_data()
