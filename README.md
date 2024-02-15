@@ -34,6 +34,16 @@ python3 main1.py
 ```bash
 #Enter your query when prompted, and the chatbot will respond accordingly.
 ```
+# ALTERNATIVELY USING DOCKERFILE PROVIDED
+
+1 . Build the docker image
+
+    sudo docker build -t chatbot1 .
+    
+2. Run the container from the image
+    ```bash
+    sudo docker run -it chatbot1
+    ```
 
 #### PS : The main1.py is the RAG based CLI Chatbot System Using Llamaindex Framework
 #### And the main4.py is the implementation of the weaviate vectordb which is incomplete working on it. 
